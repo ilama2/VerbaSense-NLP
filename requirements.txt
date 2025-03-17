@@ -1,4 +1,4 @@
-tensorflow==2.10.0
+tensorflow==2.16.1
 numpy==1.23.5
 Pillow
 streamlit
@@ -7,3 +7,5 @@ matplotlib>=3.7.2
 joblib
 markdown-it-py==2.2.0
 rich==13.5.2
+nltk
+scikit_learn
