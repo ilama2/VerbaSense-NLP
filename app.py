@@ -10,7 +10,7 @@ import gensim.downloader as api
 
 # Google Drive file ID (Replace with your actual file ID)
 file_id = "1MT_LbSeHgjEPvTWr1Ffyl-ogVSt9jIgn"
-output_path ="/app/models/"
+output_path ="/tmp/models/"
 
 # Download from Google Drive
 gdown.download(f"https://drive.google.com/drive/folders/{file_id}", output=output_path, quiet=False)
