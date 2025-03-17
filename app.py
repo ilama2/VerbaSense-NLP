@@ -3,6 +3,7 @@ import tensorflow as tf
 import numpy as np
 import gdown
 import nltk
+from gensim.models import KeyedVectors
 from nltk.tokenize import word_tokenize
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import gensim.downloader as api
