@@ -10,8 +10,8 @@ import gensim.downloader as api
 
 
 # Load pre-trained Word2Vec model
-w2v_model = api.load("word2vec-google-news-300")
-embedding_dim = 300  # Word vector size
+w2v_model = api.load("glove-wiki-gigaword-50")
+embedding_dim = 50  # Word vector size
 max_length = 30  # Fixed sentence length
 
 # Function to convert text into a list of word vectors
@@ -20,7 +20,7 @@ def text_to_sequence(text, model):
     return [model[word] for word in words if word in model]
 
 # Load trained CNN model
-model = tf.keras.models.load_model("cnn_model_headline.h5")
+model = tf.keras.models.load_model("cnn_model_headline2.h5")
 
 # Streamlit app
 st.title("News Headline Classification App")
