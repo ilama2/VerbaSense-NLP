@@ -7,7 +7,7 @@ matplotlib>=3.7.2
 joblib
 markdown-it-py==2.2.0
 rich==13.5.2
-nltk
+nltk==3.6.2
 scikit_learn
 gensim
 
