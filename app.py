@@ -1,11 +1,14 @@
 import streamlit as st
 import tensorflow as tf
 import numpy as np
+import os
 import nltk
 from nltk.tokenize import word_tokenize
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import gensim.downloader as api
 
+# Set custom download path
+os.environ["GENSIM_DATA_DIR"] = "/tmp/gensim-data"
 # Load pre-trained Word2Vec model
 w2v_model = api.load("word2vec-google-news-300")
 embedding_dim = 300  # Word vector size
