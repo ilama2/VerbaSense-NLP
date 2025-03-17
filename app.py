@@ -6,7 +6,8 @@ from nltk.tokenize import word_tokenize
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import gensim.downloader as api
 
-
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 # Load pre-trained Word2Vec model
 w2v_model = api.load("word2vec-google-news-300")
 embedding_dim = 300  # Word vector size
