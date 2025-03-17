@@ -9,3 +9,5 @@ markdown-it-py==2.2.0
 rich==13.5.2
 nltk
 scikit_learn
+gensim
+
