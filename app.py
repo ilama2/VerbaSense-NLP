@@ -9,11 +9,11 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import gensim.downloader as api
 
 # Google Drive file ID (Replace with your actual file ID)
-file_id = "1Q4iTRGzsSLRTmpAAzcO27JZ0Tw7PBEB5"
-output_path = "word2vec-google-news-300.kv"
+file_id = "1MT_LbSeHgjEPvTWr1Ffyl-ogVSt9jIgn"
+output_path ="/app/models/"
 
 # Download from Google Drive
-gdown.download(f"https://drive.google.com/uc?id={file_id}", output_path, quiet=False)
+gdown.download(f"https://drive.google.com/drive/folders/{file_id}", output=output_path, quiet=False)
 
 # Load the model
 w2v_model = KeyedVectors.load(output_path, mmap='r')
