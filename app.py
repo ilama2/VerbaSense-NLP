@@ -7,6 +7,8 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import gensim.downloader as api
 
 import os
+# Change Gensim path to avoid permission issues
+os.environ['GENSIM_DATA_DIR'] = '/tmp/gensim-data'
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 # Load pre-trained Word2Vec model
 w2v_model = api.load("word2vec-google-news-300")
