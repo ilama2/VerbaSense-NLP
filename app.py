@@ -7,10 +7,17 @@ from nltk.tokenize import word_tokenize
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import gensim.downloader as api
 
-# Set custom download path
-os.environ["GENSIM_DATA_DIR"] = "/tmp/gensim-data"
+# Google Drive file ID (Replace with your actual file ID)
+file_id = "1Q4iTRGzsSLRTmpAAzcO27JZ0Tw7PBEB5"
+output_path = "word2vec-google-news-300.kv"
+
+# Download from Google Drive
+gdown.download(f"https://drive.google.com/uc?id={file_id}", output_path, quiet=False)
+
+# Load the model
+w2v_model = KeyedVectors.load(output_path, mmap='r')
 # Load pre-trained Word2Vec model
-w2v_model = api.load("word2vec-google-news-300")
+#w2v_model = api.load("word2vec-google-news-300")
 embedding_dim = 300  # Word vector size
 max_length = 30  # Fixed sentence length
 
